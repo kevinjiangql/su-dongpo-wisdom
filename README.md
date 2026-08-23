@@ -10,7 +10,7 @@
 | [01-thought-distillate.md](./01-thought-distillate.md) | 苏东坡思想蒸馏（五大元素） |
 | [02-works-distillate.md](./02-works-distillate.md) | 全部作品按文体蒸馏（词/诗/赋/文/题跋/书/奏议） |
 | [03-skill-definition.md](./03-skill-definition.md) | `su-dongpo-wisdom` skill 的定义文件副本 |
-| [04-six-letters.md](./04-six-letters.md) | 六种人生处境下的苏东坡回信示例（失业/被裁/降职/外派/分手/丧亲） |
+| [04-six-letters.md](./04-six-letters.md) | 逆境版回信（失业/被裁/降职/外派/分手/丧亲） |
 | [05-letter-success.md](./05-letter-success.md) | 顺境版回信：致顺境中的你 |
 
 ## Skill 实际位置
