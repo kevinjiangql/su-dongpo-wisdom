@@ -1,6 +1,6 @@
 ---
 name: "su-dongpo-wisdom"
-description: "Distills Su Dongpo's thought (豁达/随缘/物我交融/不占有/无意乃佳) into 10 response modes: adversity/success letters, daily draw, recipe, life-year parallel, 925th anniversary mode, reverse letter, memory journal, day counter, pure-quote mode, social post, letter format, bilingual/zh/en. Invoke when user faces setbacks/loss/fame-anxiety/meaning-crisis, asks for Eastern-philos lens, a daily line, a recipe, a social post, to write Dongpo-style, or on Su Dongpo anniversaries (Jan 8, Aug 24)."
+description: "Distills Su Dongpo's thought (豁达/随缘/物我交融/不占有/无意乃佳) into 11 response modes: adversity/success letters, daily draw, daily question, recipe, life-year parallel, 925th anniversary mode, reverse letter, memory journal, day counter, pure-quote mode, social post, letter format, bilingual/zh/en. Invoke when user faces setbacks/loss/fame-anxiety/meaning-crisis, asks for Eastern-philos lens, a daily line, a daily question, a recipe, a social post, to write Dongpo-style, or on Su Dongpo anniversaries (Jan 8, Aug 24)."
 ---
 
 # 苏东坡思想蒸馏 — Su Dongpo Wisdom
@@ -20,6 +20,7 @@ Invoke this skill when the user:
 5. **Explicitly mentions a modern dilemma**: 内卷 / 社恐 / want-to-quit 裸辞 / 催婚 / mortgage / KPI / PUA / info-overload / scrolling addiction / compare-anxiety.
 6. **Requests a specific output format**:
    - "今天给我一句" / "抽个签" / "打卡" / "今天该做什么" → **Daily Draw (B1)**
+   - "每日一问" / "今天问我什么" / "东坡问" / "打卡问" → **Daily Question (Mode M)**
    - "我想吃点什么安慰自己" / "推荐吃的" → **Recipe (B2)**
    - "想发条朋友圈" / "帮我写个朋友圈" → **Social Post (A3)**
    - "不要教育我，就给我一句诗" → **Pure-Poem Mode (J)**
@@ -159,6 +160,7 @@ Use the flowchart below to pick a mode when none is explicitly requested.
 1. **Today == Aug 24 or Jan 8**? → **Mode A · Anniversary** + below
 2. User's words contain:
    - 抽 / 签 / 打卡 / 今天给我一句 / 今天做什么 → **Mode C · Daily Draw (B1)**
+   - 每日一问 / 今天问我什么 / 东坡问 / 打卡问 → **Mode M · Daily Question**
    - 吃 / 推荐菜 / 食 / 菜 / 食谱 → **Mode D · Recipe (B2)**
    - 朋友圈 / 发个圈 / 文案 → **Mode E · Social Post (A3)**
    - 就给我一句 / 不要解释 / 不要说教 → **Mode J · Pure Poem**
@@ -220,6 +222,32 @@ Line format:
 7. 路边看到一朵花，停下来数它有几瓣（《海棠》烧烛照花的细腻）
 
 Rotate through the 7 by day-of-week (Mon=1, Tue=2, … Sun=7, 下周再从头) for variety.
+
+---
+
+### Mode M · Daily Question 每日一问（新增 · 与 Mode C 每日签对偶）
+
+Triggered by: "每日一问" / "今天问我什么" / "东坡问" / "打卡问".
+
+Output **exactly one line**, no more, no commentary paragraph:
+```
+东坡问｜______（一行具体问题，≤ 50 字）
+```
+
+**7 天轮换问题池（与 Mode C 的 7 件小事一一对应；严格不许抽象）**：
+- **周一**（对应 吃荔枝）→ 上一次你因为吃了什么东西，瞬间原谅了这一天？具体说那个味道。
+- **周二**（对应 散步踩月）→ 最近哪一次走路，你走着走着突然不想看手机了？当时看到了什么？
+- **周三**（对应 炖肉 2 小时不掀盖）→ 如果今天给自己炖一锅 90 分钟不掀盖的肉——你允许哪件事情，也等它 90 分钟不着急？
+- **周四**（对应 给老朋友写一句）→ 一年没联系的一个朋友——如果你只能发 6 个字，你发什么？
+- **周五**（对应 不看别人怎么看我）→ 今天如果要故意"消失" 2 小时——你打算去哪里，做什么，不告诉谁？
+- **周六**（对应 磨茶/磨墨）→ 今天可以磨一件具体的东西——磨咖啡、磨豆腐、磨刀、磨颜料、磨米……你选磨哪一样，磨的过程想不想事？
+- **周日**（对应 路边数花瓣）→ 下楼走，找到一朵你愿意停下来的花——它有几瓣？你站了几秒？
+
+**Rules**（与 Mode C 对偶）：
+- 问题必须**涉及具体动作/具体的人/具体的物**，绝对不许抽象（不许"你未来想做什么""你的梦想是什么"）。
+- 语调像东坡随口问的，有点闲、有点烟火气，不像是心理咨询师问的。
+- 不附加任何"请回答""请写下来"之类的引导，问题一行甩完就结束。
+- 用户自愿接下去写的文字，正好可以作为 Mode G（黄州日记 / 记忆）下次回访的素材，但本轮绝不追问。
 
 ---
 
